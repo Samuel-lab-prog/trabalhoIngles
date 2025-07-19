@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="navButtons">
+          <h1>Welcome to the Creature Feeding Game!</h1>
+          <p>Select a character and food option to feed your creature.</p>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div id="gameControls">
+          <select id="characterOptions">
+            <option value="Hello Kitty">Hello Kitty</option>
+            <option value="Taylor Swift">Taylor Swift</option>
+            <option value="William">William</option>
+            <option value="Harry Potter">Harry Potter</option>
+            <option value="Mordecai">Mordecai</option>
+            <option value="Miside">Miside</option>
+            <option value="Lula">Lula</option>
+            <option value="Bolsonaro">Bolsonaro</option>
+          </select>
+          <select id="foodOptions">
+            <optgroup label="healthy">
+              Healthy Foods
+              <option value="Apple">Apple</option>
+              <option value="Banana">Banana</option>
+              <option value="Carrot">Carrot</option>
+              <option value="Broccoli">Broccoli</option>
+              <option value="Spinach">Spinach</option>
+              <option value="Orange">Orange</option>
+              <option value="Grapes">Grapes</option>
+            </optgroup>
+            <optgroup label="unhealthy">Unhealthy Foods
+              <option value="Candy">Candy</option>
+              <option value="Chips">Chips</option>
+              <option value="Soda">Soda</option>
+              <option value="Hamburger">Hamburger</option>
+              <option value="Pizza">Pizza</option>
+              <option value="IceCream">Ice Cream</option>
+              <option value="Cake">Cake</option>
+              <option value="Cookies">Cookies</option>
+              <option value="Porrada">O xis Porrada</option>
+              <option value="Homem">Homem</option>
+              <option value="ChevasDog">Chevas Dog</option>
+            </optgroup>
+          </select>
+          <button class="button">Feed the creature</button>
+        </div>
+        <div id="creatureImage">
+          <p id="creatureStatusHappiness">Happiness</p>
+          <div id="happinessLevel"></div>
+          <img
+            src="images/hellokitty.webp"
+            alt="Creature Image"
+            height="100%"
+          />
+          <p id="creatureStatusHealth">Health</p>
+          <div id="healthLevel"></div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
