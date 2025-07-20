@@ -44,7 +44,7 @@ button {
 button:hover {
     background-color: #c70000;
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
     cursor: pointer;
 }
 button:active {
@@ -61,7 +61,7 @@ select {
 }
 select:hover {
     border-color: #ff0000;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+    box-shadow: 0 px 4px rgb(255, 0, 0);
     cursor: pointer;
 }
 #creatureImage {
@@ -142,4 +142,71 @@ select:hover {
 #creatureImage img {
  transform: scaleX(var(--size));
  transition: 0.5 ease;
+}
+#specialSection {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: inherit;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: disappear 1s ease-in-out 5s forwards;
+}
+
+.ball {
+  background-color: rgb(255, 0, 0);  
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: jump 1s ease-in-out 0s 3, smash 1s ease-in-out 3s 1;
+  animation-fill-mode: forwards;
+}
+
+  @keyframes jump {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-150px); }
+  100% { transform: translateY(0); }
+  }
+  @keyframes smash{
+    0% {transform: scaleX(1);}
+    100% {
+        border-radius: 0px;
+        height: 10px;
+        width: 50%;
+    }
+  }
+#loadingText {
+  font-size: 4.5rem;
+  position: fixed;
+  top : 40%;
+}
+span{
+    opacity: 0;
+    animation: appear 1s ease-in-out 4s forwards;
+}
+@keyframes appear{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes disappear {
+    0% {opacity: 1;}
+    100% {
+        opacity: 0;
+        display: none;
+    }
+    
 }

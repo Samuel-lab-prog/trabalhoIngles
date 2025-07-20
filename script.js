@@ -4,6 +4,7 @@ const selectFood = document.getElementById("foodOptions");
 const creatureImage = document.querySelector("#creatureImage img");
 const happinessLevel = document.querySelector("#happinessLevel");
 const healthLevel = document.querySelector("#healthLevel");
+const unlockButton = document.getElementById("unlockButton");
 
 let type = 'Healthy';
 let character = "Hello Kitty";
@@ -84,4 +85,15 @@ feedButton.addEventListener("click", () => {
 
   updateHappinessLevel(happinessLevelValue);
   updateHealthLevel(healthLevelValue);
+});
+
+unlockButton.addEventListener("click", (event) => {
+  alert("You have unlocked:\n- Beta Male\n- Ben 10\n- MC pipokinha \n- Gigachad");
+  selectCharacter.innerHTML += `
+    <option value="BetaMale">Beta Male</option>
+    <option value="Ben10">Ben 10</option>
+    <option value="MCPipokinha">MC pipokinha</option>
+    <option value="Gigachad">Gigachad</option>
+  `;
+  event.target.style.display = "none";
 });
