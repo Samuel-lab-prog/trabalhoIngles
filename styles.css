@@ -72,7 +72,7 @@ header{
     height: 100%;
     width: 100%;
 }
-#infoSectionDiv, #actionsDiv, #sponsorsDiv{
+#infoSectionDiv, #actionsDiv{
     display: flex;
     align-items: start;
     justify-content: start;
@@ -97,6 +97,62 @@ header{
     margin: 10px 0 10px 0;
 }
 #donateButton{
+    margin-top: 80px;
+    background-color: #ff0000;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+#sponsorsDiv{
+    margin: 0 80px 0 80px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    height: 700px;
+}
+#sponsorsDiv h1{
+    font-size: 4rem;
+}
+#sponsorsDiv p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 10px 0 10px 0;
+    max-width: 960px;
+    text-align: justify;
+}
+#sponsorsDiv ul li{
+    font-size: 1.5rem;
+    list-style: none;
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+}
+#sponsorsDiv ul :hover{
+    color: #ff0000;
+    cursor: pointer;
+}
+#gameDiv{
+    margin: 0 80px 0 80px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    height: 700px;
+}
+#gameDiv h1{
+    font-size: 4rem;
+}
+#gameDiv p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 10px 0 10px 0;
+    max-width: 960px;
+    text-align: justify;
+}
+#gameDiv button{
     margin-top: 80px;
     background-color: #ff0000;
     padding: 10px 30px;

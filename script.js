@@ -1,8 +1,10 @@
-const playButton = document.getElementById("playButton");
+const playButtons = document.getElementsByClassName("playButton");
 const donateButtons = document.querySelectorAll("#donateButton");
 
-playButton.addEventListener("click", () => {
-  window.location.href = "game/gamePage.html";
+Array.from(playButtons).forEach((button) => {
+  button.addEventListener("click", () => {
+    window.location.href = "game/gamePage.html";
+  });
 });
 
 donateButtons.forEach((button) => {
